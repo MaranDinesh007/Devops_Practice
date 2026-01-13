@@ -27,3 +27,11 @@ jobs:
       - name: Build with maven
         run: mvn clean test
 
+      - name: Generate jacoco report
+        run : mvn jacoco:report
+
+      - name: Upload jacoco report
+        uses : actions/upload-arttifact@v4
+        with:
+          name: jacoco-report
+          path: target/site/jacaco
