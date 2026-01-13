@@ -27,6 +27,10 @@ jobs:
       - name: Build with maven
         run: mvn clean test
 
+  jacoco:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Generate jacoco report
         run : mvn jacoco:report
 
