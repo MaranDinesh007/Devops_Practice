@@ -43,3 +43,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: jacoco-report
+
+  deployment:
+    runs-on: ubuntu-latest
+    needs: [jacoco,build]
+    steps:
+      - name: Publish in Github
+        run: mvn deploy -DskipTests
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
