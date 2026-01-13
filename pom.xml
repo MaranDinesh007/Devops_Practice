@@ -79,7 +79,7 @@
 		<repository>
 			<id>github</id>
 			<name>Github Packages</name>
-			<url>https://maven.pkg.github.com/MaranDinesh007/Devops_Practice.git</url>
+			<url>https://maven.pkg.github.com/MaranDinesh007/Devops_Practice</url>
 		</repository>
 	</distributionManagement>
 
